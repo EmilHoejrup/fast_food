@@ -1,4 +1,4 @@
-package fast_food;
+//package fast_food;
 
 public class Food {
     protected String name;

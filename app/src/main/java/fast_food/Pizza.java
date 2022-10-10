@@ -1,4 +1,4 @@
-package fast_food;
+//package fast_food;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,9 +19,13 @@ public class Pizza extends Food{
     @Override
     public void display() {
         String displayText = price + " kr " + name + " { ";
-        String seperator = " ";
-        for (String topping : toppings) {
-            displayText += topping + seperator;
+        String seperator = ", ";
+        for (int i = 0; i < toppings.size(); i++) {
+            if(i == toppings.size() - 1){
+                seperator = " ";
+            }
+            displayText += toppings.get(i) + seperator;
+            
         }
         displayText += "}";
         System.out.println(displayText);
