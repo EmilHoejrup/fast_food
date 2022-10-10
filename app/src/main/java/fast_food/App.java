@@ -4,11 +4,19 @@
 package fast_food;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        Order order = new Order();
+        order.addFood(new Food("Burger", 40));
+        order.addFood(new Food("Pasta", 23));
+        order.display();
+        order.addFood(new Pizza());
+        Pizza pizza = new Pizza();
+        pizza.addTopping("Noutella");
+        pizza.addTopping("Ost");
+        pizza.addTopping("Is");
+        order.addFood(pizza);
+        order.display();
+        order.payWith(null);
     }
 }
